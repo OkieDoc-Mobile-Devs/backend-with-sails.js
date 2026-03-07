@@ -20,10 +20,6 @@ module.exports.routes = {
 
   "/": { view: "pages/homepage" },
   "GET /isAlive": "MainController.isAlive",
-  "GET /findUser/:id": "MainController.findUserById",
-  "POST /userAdd": "MainController.addUser",
-  "PUT /updateUser/:id": "MainController.updateUserById",
-  "DELETE /deleteUser/:id": "MainController.deleteUser",
 
   /***************************************************************************
    *                                                                          *
