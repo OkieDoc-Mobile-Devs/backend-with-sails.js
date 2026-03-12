@@ -8,9 +8,9 @@
 require("dotenv").config();
 
 let users = [
-  { id: 1, name: "John Doe", age: 33 },
-  { id: 2, name: "Mary Jane Watson", age: 35 },
-  { id: 3, name: "Betty Crocker", age: 60 },
+  { id: "P1001", name: "John Doe", age: 33 },
+  { id: "P1002", name: "Mary Jane Watson", age: 35 },
+  { id: "P1003", name: "Betty Crocker", age: 60 },
 ];
 
 module.exports = {
@@ -23,11 +23,12 @@ module.exports = {
   getUserById: function (req, res) {
     //get the user in the Array
     let foundUser = users.find((user) => {
-      return user.id === Number(req.params.id);
+      return user.id === req.params.id;
     });
 
     //send a response
-    if (foundUser !== true) {
+    if (!foundUser) {
+      //! is the NOT operator, inverts legitimate data into a falsy, and vice versa
       res
         .status(404)
         .send(`ERROR! User with an id of ${req.params.id} does not exist!`);
