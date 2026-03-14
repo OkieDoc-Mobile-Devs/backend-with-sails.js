@@ -20,7 +20,9 @@ module.exports.routes = {
 
   "/": { view: "pages/homepage" },
   "GET /isAlive": "MainController.isAlive",
-
+  "GET /getMappedCourses": "MainController.mapAllCoursesAndInstructor",
+  "GET /getExpiringCourses": "MainController.getAllExpiringCourses",
+  "GET /getCoursesPerInstructor/:id": "MainController.getCoursesPerInstructor",
   /***************************************************************************
    *                                                                          *
    * More custom routes here...                                               *
