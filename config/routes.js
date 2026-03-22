@@ -20,6 +20,20 @@ module.exports.routes = {
 
   "/": { view: "pages/homepage" },
   "GET /isAlive": "MainController.isAlive",
+  "GET /findUser/:id": "MainController.getUserById",
+  "POST /addUser": "MainController.addNewUser",
+  "PUT /updateUser/:id": "MainController.updateUser",
+  "DELETE /deleteUser/:id": "MainController.deleteUser",
+  "GET /getAllEmployees": "PracticeController.getAllEmployees",
+  "GET /getAllEmployeesByManager/:managerId": "PracticeController.getAllEmployeesByManager",
+  "GET /mapEmployeesPerManager": "PracticeController.mapAllEmployeesPerManager",
+  "POST /addEmployee": "PracticeController.addEmployee",
+  "PUT /updateEmployee/:employeeId": "PracticeController.updateEmployee",
+  "DELETE /deleteEmployee/:employeeId": "PracticeController.deleteEmployee",
+  "GET /getAllEmployeeManagerDepartment": "PracticeController.getAllEmployeeManagerDepartment"
+
+
+  
 
   /***************************************************************************
    *                                                                          *
