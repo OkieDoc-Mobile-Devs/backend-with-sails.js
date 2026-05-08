@@ -25,15 +25,15 @@ module.exports.routes = {
   "PUT /updateUser/:id": "MainController.updateUser",
   "DELETE /deleteUser/:id": "MainController.deleteUser",
   "GET /getAllEmployees": "PracticeController.getAllEmployees",
-  "GET /getAllEmployeesByManager/:managerId": "PracticeController.getAllEmployeesByManager",
+  "GET /getAllEmployeesByManager/:managerId":
+    "PracticeController.getAllEmployeesByManager",
   "GET /mapEmployeesPerManager": "PracticeController.mapAllEmployeesPerManager",
   "POST /addEmployee": "PracticeController.addEmployee",
   "PUT /updateEmployee/:employeeId": "PracticeController.updateEmployee",
   "DELETE /deleteEmployee/:employeeId": "PracticeController.deleteEmployee",
-  "GET /getAllEmployeeManagerDepartment": "PracticeController.getAllEmployeeManagerDepartment"
-
-
-  
+  "GET /getAllEmployeeManagerDepartment":
+    "PracticeController.getAllEmployeeManagerDepartment",
+  "GET /api/pingMailChimp": "MailChimpController.pingMailChimp",
 
   /***************************************************************************
    *                                                                          *
